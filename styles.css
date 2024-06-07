@@ -1,0 +1,88 @@
+label {
+    display:inline-block;
+    width:100px;
+}
+
+table {
+    border-collapse:collapse;
+    width:100%;
+    margin-top:10px;
+}
+
+form input {
+    width:280px;
+    margin-top:10px;
+    padding:5px;
+
+}
+
+form input[type="submit"] {
+    margin-left:110px;
+    margin-top:10px;
+    padding:5px;
+    background-color:green;
+    color:#ffffff;
+    border:none;
+    cursor:pointer;
+}
+
+table, tr, td, th {
+    border:2px solid black;
+}
+
+body {
+    font-family:Arial,Helvetica,sans-serif;
+    background-color:aquamarine;
+}
+h1 {
+    text-align:center;
+    color:red;
+}
+.grandTotal {
+    color:#e11f1f;
+}
+
+.btn {
+    width:200px;
+    font-size:20px;
+    padding:10px;
+    border:none;
+    margin-top:20px;
+    color:#ffffff;
+    background-color:green;
+    border-radius:10px;
+    cursor:pointer;
+
+}
+.btn:nth-child(odd) {
+    margin-right:20px;
+}
+.btn:hover {
+    background-color:#2196f3;
+}
+.act-btn {
+    margin:20px;
+    background-color:green;
+    color:#ffffff;
+    padding:5px 10px;
+}
+.delete {
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    background-color:red;
+    color:#fff;
+    font-size:22px;
+}
+.edit {
+    background-color:green;
+    color:#ffffff;
+    padding:4px;
+    border-radius:4px;
+    border:none;
+}
+@media print {
+    button {
+        display:none;
+    }
+}
