@@ -13,7 +13,63 @@
         <link rel="stylesheet" href="styles.css">
         <script src="control.js"></script>
         <script>
-                let records = [];
+                  
+        </script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <h1>Biling System</h1>
+        <form action="index.php" method = "post">
+            <label for="item">Item :</label>
+            <input type="text" name="item" id="item"/><br/>
+            <label for="price">Price :</label>
+            <input type="number" name="price" id="price"/><br/>
+            <label for="quantity">Quantity :</label>
+            <input type="number" name="quantity" id="quantity"/><br/>
+            <input type="submit" value="submit"/>
+        </form>
+
+        <table>
+            <thead>
+                <th>#<button id="sortByIndex" title="sort by asccending index">⬇️</button></th>
+                <th>Item <button id="sortByName" title="sort by asccending order">⬇️</button></th>
+                <th>Rate <button id="sortByRate" title="sort by asccending price">⬇️</button></th>
+                <th>Quantity <button id="sortByQuantity" title="sort by asccending quantity">⬇️</button></th>
+                <th>Total <button id="sortByTotal" title="sort by asccending total">⬇️</button></th>
+            </thead>
+            <tbody>
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Number of items:<span id="itemCount"></span><br/></td>
+                    <td colspan="2">Grand Total :</td>
+                    <td ><span class="grandTotal">0</span></td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <button type="button" onclick="window.print()" class="act-btn">Print Page</button>
+        <button type="button" id="clearBtn" class="act-btn">Clear</button>
+        <template>
+            <tr>
+                <td >
+                    <span class="count"></span>
+                    <button type="button" class="delete" title="delete">&times;</button>
+                    <button type="button" class="edit" title="edit">Edit ⚒️</button>
+                </td>
+                
+                <td class="name"></td>
+                <td class="rate"></td>
+                <td class="quantity"></td>
+                <td class="total"></td>
+            </tr>
+        </template>
+        
+        <script type="text/javascript">
+              let records = [];
     let form = document.querySelector('form').addEventListener("submit",(event) => {
         event.preventDefault();
 
@@ -142,63 +198,7 @@
         }
     }
 
-            
-        </script>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <h1>Biling System</h1>
-        <form action="index.php" method = "post">
-            <label for="item">Item :</label>
-            <input type="text" name="item" id="item"/><br/>
-            <label for="price">Price :</label>
-            <input type="number" name="price" id="price"/><br/>
-            <label for="quantity">Quantity :</label>
-            <input type="number" name="quantity" id="quantity"/><br/>
-            <input type="submit" value="submit"/>
-        </form>
-
-        <table>
-            <thead>
-                <th>#<button id="sortByIndex" title="sort by asccending index">⬇️</button></th>
-                <th>Item <button id="sortByName" title="sort by asccending order">⬇️</button></th>
-                <th>Rate <button id="sortByRate" title="sort by asccending price">⬇️</button></th>
-                <th>Quantity <button id="sortByQuantity" title="sort by asccending quantity">⬇️</button></th>
-                <th>Total <button id="sortByTotal" title="sort by asccending total">⬇️</button></th>
-            </thead>
-            <tbody>
-
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="2">Number of items:<span id="itemCount"></span><br/></td>
-                    <td colspan="2">Grand Total :</td>
-                    <td ><span class="grandTotal">0</span></td>
-                </tr>
-            </tfoot>
-        </table>
-
-        <button type="button" onclick="window.print()" class="act-btn">Print Page</button>
-        <button type="button" id="clearBtn" class="act-btn">Clear</button>
-        <template>
-            <tr>
-                <td >
-                    <span class="count"></span>
-                    <button type="button" class="delete" title="delete">&times;</button>
-                    <button type="button" class="edit" title="edit">Edit ⚒️</button>
-                </td>
-                
-                <td class="name"></td>
-                <td class="rate"></td>
-                <td class="quantity"></td>
-                <td class="total"></td>
-            </tr>
-        </template>
         
-        <script type="text/javascript">
-            
         </script>
     </body>
 </html>
